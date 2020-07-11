@@ -1,6 +1,7 @@
 package com.qianfeng.stream
 
 
+import org.apache.flink.api.common.io.InputFormat
 import org.apache.flink.api.common.typeinfo.{BasicTypeInfo, TypeInformation}
 import org.apache.flink.api.java.io.jdbc.JDBCInputFormat
 import org.apache.flink.api.java.typeutils.RowTypeInfo
@@ -8,6 +9,17 @@ import org.apache.flink.api.scala._
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.types.Row
 
+
+/**
+ * 使用flinkjdbc来读取有jdbc驱动数据库中数据(维度数据、读取增量数据场景)
+ * 1、添加flink-jdbc的依赖
+ *
+ * 注:
+ * 1、支持jdbc驱动的数据库都可以使用该方式读取
+ * 2、flink-jdbc的底层其实是自定义InputFormat
+ * 3、如果不支持jdbc的驱动，，可以进行自定义InputFormat
+ * 4、整个InputFormat可以当成是flink的source，需要使用的是env.createInput()
+ */
 object Demo05_stream_flink_jdbc {
 	def main(args: Array[String]): Unit = {
 		//1、获取流式执行环境   --- scala包
@@ -16,23 +28,22 @@ object Demo05_stream_flink_jdbc {
 		//2、自定义jdbc的source  --- 表中字段类型
 		val fileds_type: Array[TypeInformation[_]] = Array[TypeInformation[_]](
 			//id字段类型
-			BasicTypeInfo.LONG_TYPE_INFO,
-			//省
+			BasicTypeInfo.INT_TYPE_INFO,
 			BasicTypeInfo.STRING_TYPE_INFO,
-			//市
 			BasicTypeInfo.STRING_TYPE_INFO
 		)
 		//获取行信息
 		val rowTypeInfo: RowTypeInfo = new RowTypeInfo(fileds_type: _*)
 
+
 		//获取flink-jdbc的InputFormat输入格式
 		val jdbcInputFormat: JDBCInputFormat = JDBCInputFormat
 			.buildJDBCInputFormat()
 			.setDrivername("com.mysql.jdbc.Driver")
-			.setDBUrl("jdbc:mysql://localhost:3306/local")
+			.setDBUrl("jdbc:mysql://hadoop01:3306/test")
 			.setUsername("root")
-			.setPassword("administrator")
-			.setQuery("select * from dmp")
+			.setPassword("root")
+			.setQuery("select * from stu1")
 			.setRowTypeInfo(rowTypeInfo)
 			.finish()
 
@@ -45,58 +56,3 @@ object Demo05_stream_flink_jdbc {
 		env.execute("flink jdbc inputformat-")
 	}
 }
-
-//class MysqlSource() extends RichSourceFunction[Stu] {
-//
-//	var conn: Connection = _
-//	var ps: PreparedStatement = _
-//	var res: ResultSet = _
-//
-//	override def open(parameters: Configuration): Unit = {
-//		val driver = "com.mysql.jdbc.Driver"
-//		val url = "jdbc:mysql://127.0.0.1:3306/local"
-//		val user = "root"
-//		val passwd = "administrator"
-//
-//		try {
-//			Class.forName(driver)
-//			conn = DriverManager.getConnection(url, user, passwd)
-//			ps = conn.prepareStatement("select * from dmp")
-//		} catch {
-//			case e: Exception => e.printStackTrace()
-//		}
-//
-//	}
-//
-//	override def run(sourceContext: SourceFunction.SourceContext[Stu]): Unit = {
-//		try {
-//			res = ps.executeQuery()
-//			while (res.next()) {
-//
-//				val stu = new Stu(res.getInt(1),
-//					res.getString(2).trim,
-//					res.getString(3).trim)
-//
-//				sourceContext.collect(stu)
-//			}
-//		} catch {
-//			case e1: Exception => e1.printStackTrace()
-//		}
-//	}
-//
-//	override def cancel(): Unit = {
-//
-//	}
-//
-//	override def close(): Unit = {
-//		if (res != null) {
-//			res.close()
-//		}
-//		if (ps != null) {
-//			ps.close()
-//		}
-//		if (conn != null) {
-//			conn.close()
-//		}
-//	}
-//}

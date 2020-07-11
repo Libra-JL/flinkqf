@@ -9,7 +9,10 @@ object Demo01_stream_WordCount {
 
 		val dataStream:DataStream[String] = env.socketTextStream("192.168.5.101", 6666)
 
-		val value = dataStream.flatMap(_.split(" ")).map((_, 1)).keyBy(0).sum(1)
+		val value = dataStream.flatMap(_.split(" "))
+			.map((_, 1))
+			.keyBy(0)
+			.sum(1)
 
 
 		value.print("wc-")
@@ -18,3 +21,6 @@ object Demo01_stream_WordCount {
 
 	}
 }
+
+
+
