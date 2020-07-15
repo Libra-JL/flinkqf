@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce226c70-be2a-41a5-904a-3b5abe10374d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/batch/Demo02_batch_basicSource.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/batch/Demo03_batch_transformation.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/batch/Demo04_batch_sink.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo20_stream_parall.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo21_stream_chain.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo23_stream_valueState.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo24_stream_Checkpoint.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo25_stream_AsyncIO.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo25_stream_Restart.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo26_stream_BroadCast.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo27_stream_dfcache.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo29_stream_window.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo30_stream_windowReduce.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo31_stream_windowAggregate.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo04_stream_customerSource_mysql.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo04_stream_customerSource_mysql.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo22_stream_partitioner.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/qianfeng/stream/Demo22_stream_partitioner.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +66,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -207,7 +190,7 @@
       <workItem from="1594644499672" duration="5160000" />
       <workItem from="1594689241135" duration="7672000" />
       <workItem from="1594707201277" duration="16077000" />
-      <workItem from="1594773649049" duration="23474000" />
+      <workItem from="1594773649049" duration="23731000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1594114130009</created>
@@ -251,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594653201427</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="day 6 some api">
+      <created>1594826056101</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594826056101</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +265,8 @@
     <MESSAGE value="day 2 some source" />
     <MESSAGE value="day 4 some operator" />
     <MESSAGE value="day 5 some operator" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 5 some operator" />
+    <MESSAGE value="day 6 some api" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 6 some api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2333" y="310" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594820574590">
@@ -296,11 +287,11 @@
       <screen x="1920" y="191" width="1366" height="728" />
     </state>
     <state x="2364" y="414" width="477" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594693114664" />
-    <state x="2318" y="191" width="800" height="928" key="CommitChangelistDialog2" timestamp="1594653198602">
+    <state x="2318" y="191" width="800" height="928" key="CommitChangelistDialog2" timestamp="1594826164778">
       <screen x="1920" y="191" width="1366" height="728" />
     </state>
     <state x="464" y="0" width="800" height="928" key="CommitChangelistDialog2/1920.191.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1594473942701" />
-    <state x="2318" y="191" key="CommitChangelistDialog2/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594653198602" />
+    <state x="2318" y="191" key="CommitChangelistDialog2/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594826164778" />
     <state x="2350" y="270" key="DetectedRootsChooserDialog" timestamp="1594181077865">
       <screen x="1920" y="191" width="1366" height="728" />
     </state>
@@ -358,16 +349,16 @@
     </state>
     <state width="1524" height="327" key="GridCell.Tab.1.right/1920.191.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1594520663079" />
     <state width="1323" height="222" key="GridCell.Tab.1.right/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594653286723" />
-    <state x="2175" y="204" key="SettingsEditor" timestamp="1594698475299">
+    <state x="2175" y="204" key="SettingsEditor" timestamp="1594826148954">
       <screen x="1920" y="191" width="1366" height="728" />
     </state>
     <state x="621" y="152" key="SettingsEditor/1920.191.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1594113838600" />
-    <state x="2175" y="204" key="SettingsEditor/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594698475299" />
-    <state x="2427" y="361" key="Vcs.Push.Dialog.v2" timestamp="1594653216292">
+    <state x="2175" y="204" key="SettingsEditor/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594826148954" />
+    <state x="2427" y="361" key="Vcs.Push.Dialog.v2" timestamp="1594826071647">
       <screen x="1920" y="191" width="1366" height="728" />
     </state>
     <state x="712" y="243" key="Vcs.Push.Dialog.v2/1920.191.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1594473947997" />
-    <state x="2427" y="361" key="Vcs.Push.Dialog.v2/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594653216292" />
+    <state x="2427" y="361" key="Vcs.Push.Dialog.v2/1920.191.1366.728/0.0.1920.1040@1920.191.1366.728" timestamp="1594826071647" />
     <state x="668" y="401" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594534023051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
