@@ -25,7 +25,7 @@ object Demo04_stream_customerSource_mysql {
 	}
 }
 
-class MysqlSource() extends RichSourceFunction[Stu] {
+class MysqlSource extends RichSourceFunction[Stu] {
 
 	var conn: Connection = _
 	var ps: PreparedStatement = _
